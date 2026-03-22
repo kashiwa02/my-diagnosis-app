@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人間ステータス診断【覚醒版】</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>人間ステータス診断【覚醒版】</h1>
+  <p id="desc">あなたの隠された性格と才能を暴きます。</p>
+
+  <!-- プログレスバー -->
+  <div id="progressContainer">
+    <div id="progressBar"></div>
+    <div id="progressText"></div>
+  </div>
+
+  <!-- 質問カード -->
+  <div id="questionBox" class="card">
+    <div id="question"></div>
+    <div id="choices"></div>
+    <button id="nextBtn" onclick="next()">次へ</button>
+  </div>
+
+  <!-- 結果カード -->
+  <div id="resultBox" class="card hidden"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

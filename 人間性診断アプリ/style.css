@@ -1,0 +1,139 @@
+body {
+  background: #0a0a0a;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 90vw;
+  margin: 50px auto;
+  padding: 0 15px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+  text-shadow: 0 0 10px #00c3ff;
+}
+
+#desc {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #aaa;
+}
+
+/* プログレスバー */
+#progressContainer {
+  background: #222;
+  border-radius: 10px;
+  height: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#progressBar {
+  background: linear-gradient(90deg,#00ff88,#00c3ff);
+  height: 100%;
+  width: 0%;
+  border-radius: 10px;
+  transition: width 0.3s;
+}
+
+#progressText {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  font-size: 12px;
+  color: #fff;
+}
+
+/* カード */
+.card {
+  background: linear-gradient(145deg,#111,#1b1b1b);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,255,255,0.5);
+  padding: 25px;
+  margin-bottom: 20px;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 1;
+}
+
+/* 選択肢ボタン */
+.choice-btn {
+  display: block;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 14px;
+  margin: 10px auto;
+  border-radius: 14px;
+  border: 2px solid #333;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+  max-width: 300px;
+  font-size: 16px;
+}
+
+.choice-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px #00c3ff;
+  background: #222;
+}
+
+.selected {
+  background: #00ff88;
+  color: #000;
+  border: 2px solid #00ff88;
+  animation: glow 0.5s infinite alternate;
+}
+
+/* 次へボタン */
+#nextBtn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  background: #555;
+  color: #fff;
+  cursor: not-allowed;
+  transition: all 0.3s;
+}
+
+#nextBtn.active {
+  background: #00ff88;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 0 12px #00ff88;
+  animation: pulse 1s infinite;
+}
+
+/* 結果カード */
+#resultBox {
+  text-align: center;
+}
+
+.stat {
+  margin: 5px;
+  font-size: 18px;
+}
+
+.high { color: red; }
+.dark { color: purple; }
+
+/* アニメーション */
+@keyframes glow { 0% { box-shadow:0 0 5px #00ff88; } 100% { box-shadow:0 0 20px #00ff88; } }
+@keyframes pulse { 0% { transform:scale(1); } 50% { transform:scale(1.05);} 100% {transform:scale(1);} }
+
+/* 非表示 */
+.hidden { display: none; }
+
+/* レスポンシブ */
+@media (max-width: 480px){
+  h1{font-size:22px;}
+  #desc{font-size:14px;}
+  .choice-btn{font-size:14px; padding:12px;}
+}
